@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div className="App container mx-auto mt-3 font-thin">
-      <h1 className="mb-3 text-5xl">Search</h1>
+      <h1 className="mb-3 text-5xl font-mono">From The Future</h1>
       <AddAppointment
         onSendAppointment={myAppointment => setAppointmentList([
           ...appointmentList, myAppointment
