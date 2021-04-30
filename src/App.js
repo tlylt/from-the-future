@@ -26,7 +26,7 @@ function App() {
   });
 
   const fetchData = useCallback(() => {
-    fetch('./from-the-future/data.json')
+    fetch('https://tlylt.github.io/from-the-future/data.json')
       .then(response => response.json())
       .then(data => {
         setAppointmentList(data)
