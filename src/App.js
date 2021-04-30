@@ -26,7 +26,7 @@ function App() {
   });
 
   const fetchData = useCallback(() => {
-    fetch('./data.json')
+    fetch('./from-the-future/data.json')
       .then(response => response.json())
       .then(data => {
         setAppointmentList(data)
