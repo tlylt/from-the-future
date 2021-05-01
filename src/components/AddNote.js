@@ -49,7 +49,7 @@ const AddAppointment = ({ onSendAppointment, lastId }) => {
 
                     <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start  sm:pt-5">
                         <label htmlFor="petName" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                            Pet Name
+                            Name
           </label>
                         <div className="mt-1 sm:mt-0 sm:col-span-2">
                             <input
@@ -86,14 +86,14 @@ const AddAppointment = ({ onSendAppointment, lastId }) => {
 
                     <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start  sm:pt-5">
                         <label htmlFor="aptNotes" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                            Appointment Notes
+                            Notes
           </label>
                         <div className="mt-1 sm:mt-0 sm:col-span-2">
                             <textarea
                                 onChange={(event) => { setFormData({ ...formData, aptNotes: event.target.value }) }}
                                 value={formData.aptNotes}
                                 id="aptNotes" name="aptNotes" rows="3"
-                                className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="Detailed comments about the condition"></textarea>
+                                className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="Detailed comments"></textarea>
                         </div>
                     </div>
 

@@ -1,17 +1,17 @@
 import './App.css';
 import Search from './components/Search';
-import AddAppointment from './components/AddAppointment';
-import AppointmentInfo from './components/AppointmentInfo';
+import AddNote from './components/AddNote';
+import NoteInfo from './components/NoteInfo';
 import { useState, useEffect, useCallback } from "react";
 
 function App() {
 
-  let [appointmentList, setAppointmentList] = useState([]);
+  let [noteList, setnoteList] = useState([]);
   let [query, setQuery] = useState("");
   let [sortBy, setSortBy] = useState("petName");
   let [orderBy, setOrderBy] = useState("desc");
 
-  const filteredAppointments = appointmentList.filter(
+  const filteredAppointments = noteList.filter(
     item => {
       return (
         item.petName.toLowerCase().includes(query.toLowerCase()) ||
@@ -29,7 +29,7 @@ function App() {
     fetch('https://tlylt.github.io/from-the-future/data.json')
       .then(response => response.json())
       .then(data => {
-        setAppointmentList(data)
+        setnoteList(data)
       })
   }, [])
 
@@ -39,13 +39,14 @@ function App() {
 
   return (
     <div className="App container mx-auto mt-3 font-thin">
-      <h1 className="mb-3 text-5xl font-mono">From The Future</h1>
-      <AddAppointment
-        onSendAppointment={myAppointment => setAppointmentList([
-          ...appointmentList, myAppointment
+      <h1 className="mb-3 text-4xl font-mono">From The Future</h1>
+      <p>Notes to (NUS) Computer Science Freshmen</p>
+      <AddNote
+        onSendAppointment={myAppointment => setnoteList([
+          ...noteList, myAppointment
         ])}
         lastId={
-          appointmentList.reduce((max, item) =>
+          noteList.reduce((max, item) =>
             Number(item.id) > max ? Number(item.id) : max, 0)
         }
       />
@@ -56,9 +57,9 @@ function App() {
         onSortByChange={mySort => setSortBy(mySort)} />
       <ul className="divide-y divide-gray-200">
         {filteredAppointments.map(appointment => (
-          <AppointmentInfo key={appointment.id} appointment={appointment}
+          <NoteInfo key={appointment.id} appointment={appointment}
             onDeleteAppointment={
-              appointmentId => setAppointmentList(appointmentList.filter(appointment => appointment.id !== appointmentId))
+              appointmentId => setnoteList(noteList.filter(appointment => appointment.id !== appointmentId))
             } />
         ))}
       </ul>
