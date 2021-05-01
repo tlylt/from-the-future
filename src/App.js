@@ -27,6 +27,12 @@ function App() {
 
   const fetchData = useCallback(() => {
     fetch('https://tlylt.github.io/from-the-future/data.json')
+      // fetch('./from-the-future/data.json', {
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //     'Accept': 'application/json'
+      //   }
+      // })
       .then(response => response.json())
       .then(data => {
         setnoteList(data)
