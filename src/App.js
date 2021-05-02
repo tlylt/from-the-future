@@ -1,22 +1,21 @@
 import './App.css';
 import Search from './components/Search';
-import AddNote from './components/AddNote';
-import NoteInfo from './components/NoteInfo';
+import AddAdvice from './components/AddAdvice';
+import AdviceInfo from './components/AdviceInfo';
 import { useState, useEffect, useCallback } from "react";
 
 function App() {
 
-  let [noteList, setnoteList] = useState([]);
+  let [adviceList, setadviceList] = useState([]);
   let [query, setQuery] = useState("");
-  let [sortBy, setSortBy] = useState("petName");
+  let [sortBy, setSortBy] = useState("owner");
   let [orderBy, setOrderBy] = useState("desc");
 
-  const filteredAppointments = noteList.filter(
+  const filteredAdvices = adviceList.filter(
     item => {
       return (
-        item.petName.toLowerCase().includes(query.toLowerCase()) ||
-        item.ownerName.toLowerCase().includes(query.toLowerCase()) ||
-        item.aptNotes.toLowerCase().includes(query.toLowerCase())
+        item.owner.toLowerCase().includes(query.toLowerCase()) ||
+        item.note.toLowerCase().includes(query.toLowerCase())
       )
     }
   ).sort((a, b) => {
@@ -35,7 +34,7 @@ function App() {
       // })
       .then(response => response.json())
       .then(data => {
-        setnoteList(data)
+        setadviceList(data)
       })
   }, [])
 
@@ -44,15 +43,15 @@ function App() {
   }, [fetchData]);
 
   return (
-    <div className="App container mx-auto mt-3 font-thin">
+    <div className="App container mx-auto mt-3 px-4 font-thin">
       <h1 className="mb-3 text-4xl font-mono">From The Future</h1>
       <p>Notes to (NUS) Computer Science Freshmen</p>
-      <AddNote
-        onSendAppointment={myAppointment => setnoteList([
-          ...noteList, myAppointment
+      <AddAdvice
+        onSendAdvice={advice => setadviceList([
+          ...adviceList, advice
         ])}
         lastId={
-          noteList.reduce((max, item) =>
+          adviceList.reduce((max, item) =>
             Number(item.id) > max ? Number(item.id) : max, 0)
         }
       />
@@ -62,10 +61,10 @@ function App() {
         sortBy={sortBy}
         onSortByChange={mySort => setSortBy(mySort)} />
       <ul className="divide-y divide-gray-200">
-        {filteredAppointments.map(appointment => (
-          <NoteInfo key={appointment.id} appointment={appointment}
-            onDeleteAppointment={
-              appointmentId => setnoteList(noteList.filter(appointment => appointment.id !== appointmentId))
+        {filteredAdvices.map(advice => (
+          <AdviceInfo key={advice.id} advice={advice}
+            onDeleteAdvice={
+              adviceId => setadviceList(adviceList.filter(advice => advice.id !== adviceId))
             } />
         ))}
       </ul>
