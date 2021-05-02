@@ -64,5 +64,17 @@
     "owner": "Silin",
     "note": "don't be intimidated/overwhelmed if you find yourself among the really awesome programmers, especially if you're coming in without any background. do your best to keep up with the lectures, and learn to pick up skills/knowledge outside of school-taught content by doing your own reading",
     "date": "2021-05-01 10:10"
+  },
+  {
+    "id": "11",
+    "owner": "Yiping",
+    "note": "1. Learn it the hard way. CS people are not meant to write fancy web pages to impress people from business school. Get yourself deep into the technical stuff. A sound foundation in C programming and system architecture are essential. 2. The teaching style in NUS (at least undergraduate courses) is easy to follow but often omits some exciting challenging stuff. Get yourself used to reading the textbooks (not the garbage ones) from cover to cover and to read research papers. 3. If you want to get an admiring CAP, the best way is to forget about your CAP. Choose the courses that appeals to your heart and can help you in your research.",
+    "date": "2021-05-01 10:10"
+  },
+  {
+    "id": "12",
+    "owner": "Jesmond",
+    "note": "Don’t be afraid to challenge yourself. Some of you may be saying to yourself “I have no background” or “The workload of the module seems daunting” but in the end you’re only preventing yourself realising your potential (just to let you know, I had never written a single line of code prior to entering uni and I’m surviving fine). Only through the ‘hardcore’ modules do you learn skills that are practical for real-world use. Have a little confidence in yourself. University is the last place you can make mistakes without reservation before you go out into the working world. Don’t learn what you need to know to pass exams because very quickly that knowledge may become obsolete. Learn how to learn. In computing, it is very hard for you to be able to dig a niche for yourself and get away with it. Technology evolves at a mind-blowing pace and the only way you can keep abreast is if you’re able to evolve with it. Pursue what piques your interest because that’s the only way you’ll be able to keep yourself going once the going gets tough. Learn to read the f***ing documentation. It’s the best way to learn the nuances of a language. And last but not least, Google is your best friend =D",
+    "date": "2021-05-01 10:10"
   }
 ]
