@@ -2,7 +2,7 @@ import { BiTrash } from "react-icons/bi"
 
 const AdviceInfo = ({ advice, onDeleteAdvice }) => {
     return (
-        <li className="grid grid-cols-1 sm:grid-cols-3 py-1">
+        <li className="grid grid-cols-1 sm:grid-cols-3 py-4">
             <div className="max-w-prose text-left sm:col-span-2">{advice.note}</div>
             <div className="justify-items-end grid items-center content-center">
                 <span>{advice.date}</span>
