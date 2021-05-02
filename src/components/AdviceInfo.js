@@ -4,7 +4,7 @@ import { BiHide } from "react-icons/bi"
 const AdviceInfo = ({ advice, onDeleteAdvice }) => {
     return (
         <li className="grid grid-cols-1 sm:grid-cols-3 py-4">
-            <div className="max-w-prose text-left sm:col-span-2">{advice.note}</div>
+            <div className="max-w-prose text-left sm:col-span-2 overflow-auto">{advice.note}</div>
             <div className="justify-items-end grid items-center content-center">
                 <span>{moment(advice.date).format('LLL')}</span>
                 <div><b className="font-bold text-sku-darker">Owner:</b> {advice.owner}</div>
