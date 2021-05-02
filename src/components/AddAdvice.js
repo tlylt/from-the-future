@@ -69,7 +69,7 @@ const AddAdvice = ({ onSendAdvice, lastId }) => {
                         <div className="flex justify-end">
                             <button
                                 onClick={formDataPublish}
-                                type="submit" className="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-sku-dark bg-sku-light hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sku-dark">
+                                type="submit" className={`ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md  hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sku-dark ${formData.note.length > 0 ? "text-sku-light bg-sku-darker" : "text-sku-dark bg-sku-light"}`}>
                                 Submit
             </button>
                         </div>
