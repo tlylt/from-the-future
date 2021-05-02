@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/from-the-future/static/css/main.09315110.chunk.css",
-    "main.js": "/from-the-future/static/js/main.0a6beb60.chunk.js",
-    "main.js.map": "/from-the-future/static/js/main.0a6beb60.chunk.js.map",
+    "main.css": "/from-the-future/static/css/main.31302810.chunk.css",
+    "main.js": "/from-the-future/static/js/main.ffec31a7.chunk.js",
+    "main.js.map": "/from-the-future/static/js/main.ffec31a7.chunk.js.map",
     "runtime-main.js": "/from-the-future/static/js/runtime-main.bbeddef2.js",
     "runtime-main.js.map": "/from-the-future/static/js/runtime-main.bbeddef2.js.map",
     "static/js/2.a63de6e7.chunk.js": "/from-the-future/static/js/2.a63de6e7.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.9fc5dd33.chunk.js": "/from-the-future/static/js/3.9fc5dd33.chunk.js",
     "static/js/3.9fc5dd33.chunk.js.map": "/from-the-future/static/js/3.9fc5dd33.chunk.js.map",
     "index.html": "/from-the-future/index.html",
-    "static/css/main.09315110.chunk.css.map": "/from-the-future/static/css/main.09315110.chunk.css.map",
+    "static/css/main.31302810.chunk.css.map": "/from-the-future/static/css/main.31302810.chunk.css.map",
     "static/js/2.a63de6e7.chunk.js.LICENSE.txt": "/from-the-future/static/js/2.a63de6e7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bbeddef2.js",
     "static/js/2.a63de6e7.chunk.js",
-    "static/css/main.09315110.chunk.css",
-    "static/js/main.0a6beb60.chunk.js"
+    "static/css/main.31302810.chunk.css",
+    "static/js/main.ffec31a7.chunk.js"
   ]
 }
