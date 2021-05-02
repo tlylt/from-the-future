@@ -7,17 +7,19 @@ const AddAdvice = ({ onSendAdvice, lastId }) => {
         owner: '',
         date: '',
         note: '',
+        contact: '',
     };
     let [toggleForm, setToggleForm] = useState(false);
     let [formData, setFormData] = useState(clearData);
 
     const formDataPublish = () => {
-        if (formData.note === "") {
+        console.log(formData.contact);
+        if (formData.note.trim() === "" || formData.contact !== "" || formData.contact === null) {
             return
         }
         const adviceInfo = {
             id: nanoid(),
-            owner: formData.owner === "" ? "Anonymous" : formData.owner,
+            owner: formData.owner.trim() === "" ? "Anonymous" : formData.owner,
             date: moment(),
             note: formData.note,
         };
@@ -63,8 +65,13 @@ const AddAdvice = ({ onSendAdvice, lastId }) => {
                                 className="px-1 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-md border-gray-300 rounded-md" placeholder="Your Advice Please..."></textarea>
                         </div>
                     </div>
-
-
+                    <div className="sm:grid sm:grid-cols-3 invisible sm:gap-4 sm:items-start hidden sm:pt-5">
+                        <label htmlFor="contact" className="block text-sm font-medium text-gray-700">Contact</label>
+                        <input id="contact" name="contact" size="40" type="text"
+                            value={formData.contact}
+                            maxLength="10"
+                            onChange={(event) => { setFormData({ ...formData, contact: event.target.value }) }} />
+                    </div>
                     <div className="pt-5">
                         <div className="flex justify-end">
                             <button

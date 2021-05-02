@@ -6,12 +6,10 @@ import { useState, useEffect, useCallback } from "react";
 import Footer from './components/Footer';
 
 function App() {
-
   let [adviceList, setAdviceList] = useState([]);
   let [query, setQuery] = useState("");
   let [sortBy, setSortBy] = useState("date");
   let [orderBy, setOrderBy] = useState("desc");
-
   const filteredAdvice = adviceList.filter(
     item => {
       return (
@@ -53,10 +51,10 @@ function App() {
     })
       .then(response => response.json())
       .then(data => {
-        console.log("Success:", data);
+        console.log("Success!");
       }).catch((error) => {
         console.log("Error:", error);
-      })
+      });
   }, [adviceList])
 
   useEffect(() => {
