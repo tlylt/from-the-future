@@ -13,7 +13,6 @@ const AddAdvice = ({ onSendAdvice, lastId }) => {
     let [formData, setFormData] = useState(clearData);
 
     const formDataPublish = () => {
-        console.log(formData.contact);
         if (formData.note.trim() === "" || formData.contact !== "" || formData.contact === null) {
             return
         }

@@ -4,6 +4,7 @@ import AddAdvice from './components/AddAdvice';
 import AdviceInfo from './components/AdviceInfo';
 import { useState, useEffect, useCallback } from "react";
 import Footer from './components/Footer';
+import moment from 'moment';
 
 function App() {
   let [adviceList, setAdviceList] = useState([]);
@@ -19,6 +20,10 @@ function App() {
     }
   ).sort((a, b) => {
     let order = (orderBy === 'asc') ? 1 : -1;
+    if (sortBy === "date") {
+      return moment(a[sortBy] + "", "YYYY-MM-DDTHH:mm:ss.SSSSZ").isBefore(moment(b[sortBy] + "", "YYYY-MM-DDTHH:mm:ss.SSSSZ"))
+        ? -1 * order : 1 * order;
+    }
     return (a[sortBy] + "").toLowerCase() < (b[sortBy] + "").toLowerCase()
       ? -1 * order : 1 * order;
   });
