@@ -8,7 +8,7 @@ function App() {
 
   let [adviceList, setAdviceList] = useState([]);
   let [query, setQuery] = useState("");
-  let [sortBy, setSortBy] = useState("owner");
+  let [sortBy, setSortBy] = useState("date");
   let [orderBy, setOrderBy] = useState("desc");
 
   const filteredAdvice = adviceList.filter(
