@@ -1,7 +1,7 @@
 ### Motivation
 
-A simple and easy way to add & view random advice from NUS SOC students to freshmen.
+A simple and easy way to add & view random advice from NUS SOC students to freshmen. Check out the website @ https://tlylt.github.io/from-the-future/
 
-### Work in progress
+### Progress Log
 
-It is still a work in progress, check out the website @ https://tlylt.github.io/from-the-future/
+2/5/2021 - First version ready and launched!
