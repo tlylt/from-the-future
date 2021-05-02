@@ -4,7 +4,7 @@ const AdviceInfo = ({ advice, onDeleteAdvice }) => {
     return (
         <li className="grid grid-cols-1 sm:grid-cols-3 py-1">
             <div className="max-w-prose text-left sm:col-span-2">{advice.note}</div>
-            <div className="justify-self-end grid justify-items-end sm:col-start-3">
+            <div className="justify-items-end grid items-center content-center">
                 <span>{advice.date}</span>
                 <div><b className="font-bold text-indigo-500">Owner:</b> {advice.owner}</div>
                 <button type="button" onClick={() => onDeleteAdvice(advice.id)}
