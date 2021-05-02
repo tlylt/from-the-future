@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/from-the-future/static/css/main.d345c4c9.chunk.css",
-    "main.js": "/from-the-future/static/js/main.96f34197.chunk.js",
-    "main.js.map": "/from-the-future/static/js/main.96f34197.chunk.js.map",
+    "main.css": "/from-the-future/static/css/main.5c98318e.chunk.css",
+    "main.js": "/from-the-future/static/js/main.d92541db.chunk.js",
+    "main.js.map": "/from-the-future/static/js/main.d92541db.chunk.js.map",
     "runtime-main.js": "/from-the-future/static/js/runtime-main.8c1b4ed3.js",
     "runtime-main.js.map": "/from-the-future/static/js/runtime-main.8c1b4ed3.js.map",
     "static/js/2.ab37012c.chunk.js": "/from-the-future/static/js/2.ab37012c.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.9c76a4ad.chunk.js": "/from-the-future/static/js/3.9c76a4ad.chunk.js",
     "static/js/3.9c76a4ad.chunk.js.map": "/from-the-future/static/js/3.9c76a4ad.chunk.js.map",
     "index.html": "/from-the-future/index.html",
-    "static/css/main.d345c4c9.chunk.css.map": "/from-the-future/static/css/main.d345c4c9.chunk.css.map",
+    "static/css/main.5c98318e.chunk.css.map": "/from-the-future/static/css/main.5c98318e.chunk.css.map",
     "static/js/2.ab37012c.chunk.js.LICENSE.txt": "/from-the-future/static/js/2.ab37012c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8c1b4ed3.js",
     "static/js/2.ab37012c.chunk.js",
-    "static/css/main.d345c4c9.chunk.css",
-    "static/js/main.96f34197.chunk.js"
+    "static/css/main.5c98318e.chunk.css",
+    "static/js/main.d92541db.chunk.js"
   ]
 }
