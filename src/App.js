@@ -43,8 +43,8 @@ function App() {
   }, [fetchData]);
 
   return (
-    <div className="App container mx-auto mt-3 px-4 font-thin">
-      <h1 className="mb-3 text-4xl font-mono">From The Future</h1>
+    <div className="bg-sku App container max-w-3xl mx-auto pt-3 px-5 font-note">
+      <h1 className="mb-3 text-4xl font-futuristic font-bold">From The Future</h1>
       <p>Notes to (NUS) Computer Science Freshmen</p>
       <AddAdvice
         onSendAdvice={advice => setAdviceList([
@@ -60,7 +60,7 @@ function App() {
         onOrderByChange={mySort => setOrderBy(mySort)}
         sortBy={sortBy}
         onSortByChange={mySort => setSortBy(mySort)} />
-      <ul className="divide-y divide-gray-200">
+      <ul className="divide-y-2 divide-sku-light">
         {filteredAdvice.map(advice => (
           <AdviceInfo key={advice.id} advice={advice}
             onDeleteAdvice={
