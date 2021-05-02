@@ -1,6 +1,6 @@
 ### Motivation
 
-A simple and easy way to add & view random advices from NUS SOC students to freshmen.
+A simple and easy way to add & view random advice from NUS SOC students to freshmen.
 
 ### Work in progress
 

@@ -6,12 +6,12 @@ import { useState, useEffect, useCallback } from "react";
 
 function App() {
 
-  let [adviceList, setadviceList] = useState([]);
+  let [adviceList, setAdviceList] = useState([]);
   let [query, setQuery] = useState("");
   let [sortBy, setSortBy] = useState("owner");
   let [orderBy, setOrderBy] = useState("desc");
 
-  const filteredAdvices = adviceList.filter(
+  const filteredAdvice = adviceList.filter(
     item => {
       return (
         item.owner.toLowerCase().includes(query.toLowerCase()) ||
@@ -34,7 +34,7 @@ function App() {
       // })
       .then(response => response.json())
       .then(data => {
-        setadviceList(data)
+        setAdviceList(data)
       })
   }, [])
 
@@ -47,7 +47,7 @@ function App() {
       <h1 className="mb-3 text-4xl font-mono">From The Future</h1>
       <p>Notes to (NUS) Computer Science Freshmen</p>
       <AddAdvice
-        onSendAdvice={advice => setadviceList([
+        onSendAdvice={advice => setAdviceList([
           ...adviceList, advice
         ])}
         lastId={
@@ -61,10 +61,10 @@ function App() {
         sortBy={sortBy}
         onSortByChange={mySort => setSortBy(mySort)} />
       <ul className="divide-y divide-gray-200">
-        {filteredAdvices.map(advice => (
+        {filteredAdvice.map(advice => (
           <AdviceInfo key={advice.id} advice={advice}
             onDeleteAdvice={
-              adviceId => setadviceList(adviceList.filter(advice => advice.id !== adviceId))
+              adviceId => setAdviceList(adviceList.filter(advice => advice.id !== adviceId))
             } />
         ))}
       </ul>
