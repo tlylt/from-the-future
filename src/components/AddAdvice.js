@@ -1,21 +1,24 @@
 import { BiDonateHeart } from "react-icons/bi";
 import { useState } from "react";
+import moment from "moment";
+import { nanoid } from "nanoid";
 const AddAdvice = ({ onSendAdvice, lastId }) => {
     const clearData = {
         owner: '',
         date: '',
-        time: '',
         note: '',
     };
     let [toggleForm, setToggleForm] = useState(false);
     let [formData, setFormData] = useState(clearData);
 
     const formDataPublish = () => {
+        if (formData.note === "") {
+            return
+        }
         const adviceInfo = {
-            id: lastId + 1,
-            owner: formData.owner,
-            date: formData.date,
-            time: formData.time,
+            id: nanoid(),
+            owner: formData.owner === "" ? "Anonymous" : formData.owner,
+            date: moment(),
             note: formData.note,
         };
         onSendAdvice(adviceInfo);
@@ -41,35 +44,11 @@ const AddAdvice = ({ onSendAdvice, lastId }) => {
                                 onChange={(event) => { setFormData({ ...formData, owner: event.target.value }) }}
                                 value={formData.owner}
                                 type="text" name="owner" id="owner"
-                                placeholder="If You Wish To Be Remembered"
-                                className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-md border-gray-300  rounded-md" />
+                                placeholder="Only If You Wish To Be Remembered..."
+                                maxLength="20"
+                                className="px-1 max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-md border-gray-300  rounded-md" />
                         </div>
                     </div>
-
-                    <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start  sm:pt-5">
-                        <label htmlFor="date" className="block text-sm font-medium text-gray-700">
-                            Date
-          </label>
-                        <div className="mt-1 sm:mt-0 sm:col-span-2">
-                            <input onChange={(event) => { setFormData({ ...formData, date: event.target.value }) }}
-                                value={formData.date}
-                                type="date" name="date" id="date"
-                                className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-md border-gray-300 rounded-md" />
-                        </div>
-                    </div>
-
-                    <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start  sm:pt-5">
-                        <label htmlFor="time" className="block text-sm font-medium text-gray-700">
-                            Time
-          </label>
-                        <div className="mt-1 sm:mt-0 sm:col-span-2">
-                            <input onChange={(event) => { setFormData({ ...formData, time: event.target.value }) }}
-                                value={formData.time}
-                                type="time" name="time" id="time"
-                                className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-md border-gray-300 rounded-md" />
-                        </div>
-                    </div>
-
                     <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start  sm:pt-5">
                         <label htmlFor="note" className="block text-sm font-medium text-gray-700">
                             Notes
@@ -79,7 +58,9 @@ const AddAdvice = ({ onSendAdvice, lastId }) => {
                                 onChange={(event) => { setFormData({ ...formData, note: event.target.value }) }}
                                 value={formData.note}
                                 id="note" name="note" rows="4"
-                                className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="Your Advice Please..."></textarea>
+                                maxLength="1000"
+                                required
+                                className="px-1 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-md border-gray-300 rounded-md" placeholder="Your Advice Please..."></textarea>
                         </div>
                     </div>
 

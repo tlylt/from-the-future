@@ -1,15 +1,16 @@
-import { BiTrash } from "react-icons/bi"
+import moment from "moment";
+import { BiHide } from "react-icons/bi"
 
 const AdviceInfo = ({ advice, onDeleteAdvice }) => {
     return (
         <li className="grid grid-cols-1 sm:grid-cols-3 py-4">
             <div className="max-w-prose text-left sm:col-span-2">{advice.note}</div>
             <div className="justify-items-end grid items-center content-center">
-                <span>{advice.date}</span>
+                <span>{moment(advice.date).format('LLL')}</span>
                 <div><b className="font-bold text-sku-darker">Owner:</b> {advice.owner}</div>
                 <button type="button" onClick={() => onDeleteAdvice(advice.id)}
-                    className="p-1.5 mr-1.5 mt-1 rounded text-white bg-red-500 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                    <BiTrash /></button>
+                    className="p-1.5 mr-1.5 mt-1 rounded text-white bg-sku-darker hover:bg-sku-light hover:text-sku-darker focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    <BiHide /></button>
             </div>
 
         </li>

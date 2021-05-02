@@ -25,18 +25,38 @@ function App() {
   });
 
   const fetchData = useCallback(() => {
-    fetch('https://tlylt.github.io/from-the-future/data.json')
-      // fetch('./from-the-future/data.json', {
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //     'Accept': 'application/json'
-      //   }
-      // })
+    // fetch('https://tlylt.github.io/from-the-future/data.json')
+    // fetch('./from-the-future/data.json', {
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     'Accept': 'application/json'
+    //   }
+    // })
+    fetch('https://hkiq5n.deta.dev/')
       .then(response => response.json())
       .then(data => {
         setAdviceList(data)
       })
   }, [])
+
+  const sendData = useCallback((advice) => {
+    setAdviceList([
+      ...adviceList, advice
+    ]);
+    fetch('https://hkiq5n.deta.dev/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(advice)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log("Success:", data);
+      }).catch((error) => {
+        console.log("Error:", error);
+      })
+  }, [adviceList])
 
   useEffect(() => {
     fetchData()
@@ -47,13 +67,7 @@ function App() {
       <h1 className="mb-3 text-4xl font-futuristic font-bold">From The Future</h1>
       <p>Notes to (NUS) Computer Science Freshmen</p>
       <AddAdvice
-        onSendAdvice={advice => setAdviceList([
-          ...adviceList, advice
-        ])}
-        lastId={
-          adviceList.reduce((max, item) =>
-            Number(item.id) > max ? Number(item.id) : max, 0)
-        }
+        onSendAdvice={(advice) => sendData(advice)}
       />
       <Search query={query} onQueryChange={myQuery => setQuery(myQuery)}
         orderBy={orderBy}
