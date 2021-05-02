@@ -3,6 +3,7 @@ import Search from './components/Search';
 import AddAdvice from './components/AddAdvice';
 import AdviceInfo from './components/AdviceInfo';
 import { useState, useEffect, useCallback } from "react";
+import Footer from './components/Footer';
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
     }
   ).sort((a, b) => {
     let order = (orderBy === 'asc') ? 1 : -1;
-    return a[sortBy].toLowerCase() < b[sortBy].toLowerCase()
+    return (a[sortBy] + "").toLowerCase() < (b[sortBy] + "").toLowerCase()
       ? -1 * order : 1 * order;
   });
 
@@ -82,6 +83,7 @@ function App() {
             } />
         ))}
       </ul>
+      <Footer />
     </div>
   );
 }
