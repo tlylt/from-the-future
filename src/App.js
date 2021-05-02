@@ -65,7 +65,7 @@ function App() {
   return (
     <div className="bg-sku App container max-w-3xl mx-auto pt-3 px-5 font-note">
       <h1 className="mb-3 text-4xl font-futuristic font-bold">From The Future</h1>
-      <p>Notes to (NUS) Computer Science Freshmen</p>
+      <p>Notes to (NUS) Computing Freshmen</p>
       <AddAdvice
         onSendAdvice={(advice) => sendData(advice)}
       />
