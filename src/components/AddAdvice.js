@@ -1,17 +1,31 @@
 import { BiDonateHeart } from "react-icons/bi";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import moment from "moment";
 import { nanoid } from "nanoid";
-const AddAdvice = ({ onSendAdvice, lastId }) => {
+
+const AddAdvice = ({ onSendAdvice }) => {
+    const getNextWaitTime = (currentTerm) => {
+        let first = 3;
+        let second = 5;
+        let temp;
+        for (let i = 0; i <= currentTerm; i++) {
+            temp = second
+            second = first + second
+            first = temp
+        }
+        return second * 1000;
+    }
+
     const clearData = {
         owner: '',
         date: '',
         note: '',
         contact: '',
     };
-    let [toggleForm, setToggleForm] = useState(false);
-    let [formData, setFormData] = useState(clearData);
-
+    const [toggleForm, setToggleForm] = useState(false);
+    const [formData, setFormData] = useState(clearData);
+    const [hasSubmitted, setSubmitted] = useState(false);
+    const currentWaitTimeTerm = useRef(0);
     const formDataPublish = () => {
         if (formData.note.trim() === "" || formData.contact !== "" || formData.contact === null) {
             return
@@ -20,11 +34,14 @@ const AddAdvice = ({ onSendAdvice, lastId }) => {
             id: nanoid(),
             owner: formData.owner.trim() === "" ? "Anonymous" : formData.owner,
             date: moment(),
-            note: formData.note,
+            note: formData.note.trim(),
         };
         onSendAdvice(adviceInfo);
         setFormData(clearData);
         setToggleForm(!toggleForm);
+        setSubmitted(true);
+        setTimeout(() => setSubmitted(false), getNextWaitTime(currentWaitTimeTerm.current++));
+
     }
 
     return (
@@ -71,11 +88,12 @@ const AddAdvice = ({ onSendAdvice, lastId }) => {
                             maxLength="10"
                             onChange={(event) => { setFormData({ ...formData, contact: event.target.value }) }} />
                     </div>
-                    <div className="pt-5">
+                    <div>
                         <div className="flex justify-end">
                             <button
-                                onClick={formDataPublish}
-                                type="submit" className={`ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md  hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sku-dark ${formData.note.length > 0 ? "text-sku-light bg-sku-darker" : "text-sku-dark bg-sku-light"}`}>
+                                onClick={formDataPublish} disabled={hasSubmitted || formData.note.length === 0}
+                                type="submit" className={`ml-3 inline-flex justify-center disabled:opacitiy-50 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md  ${hasSubmitted || formData.note.length === 0 ? "" : "hover:bg-indigo-700"} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sku-dark 
+                                ${formData.note.length > 0 && !hasSubmitted ? "text-sku-light bg-sku-darker" : "text-sku-dark bg-sku-light"}`}>
                                 Submit
             </button>
                         </div>

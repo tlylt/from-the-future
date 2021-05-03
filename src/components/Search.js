@@ -12,6 +12,9 @@ const DropDown = ({ toggle, sortBy, onSortByChange, orderBy, onOrderByChange }) 
                 <div onClick={() => onSortByChange('owner')}
                     className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 flex justify-between cursor-pointer"
                     role="menuitem">Owner Name  {(sortBy === 'owner') && <BiCheck />}</div>
+                <div onClick={() => onSortByChange('length')}
+                    className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 flex justify-between cursor-pointer"
+                    role="menuitem">Length {(sortBy === 'length') && <BiCheck />}</div>
                 <div onClick={() => onSortByChange('date')}
                     className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-50  hover:text-gray-900 flex justify-between cursor-pointer"
                     role="menuitem">Date {(sortBy === 'date') && <BiCheck />}</div>

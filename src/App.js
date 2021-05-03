@@ -23,19 +23,19 @@ function App() {
     if (sortBy === "date") {
       return moment(a[sortBy] + "", "YYYY-MM-DDTHH:mm:ss.SSSSZ").isBefore(moment(b[sortBy] + "", "YYYY-MM-DDTHH:mm:ss.SSSSZ"))
         ? -1 * order : 1 * order;
+    } else if (sortBy === "owner") {
+      return (a[sortBy] + "").toLowerCase() < (b[sortBy] + "").toLowerCase()
+        ? -1 * order : 1 * order;
+    } else if (sortBy === "length") {
+      return a.note.length < b.note.length ? -1 * order : 1 * order;;
+    } else {
+      console.log("Something is wrong");
+      return false;
     }
-    return (a[sortBy] + "").toLowerCase() < (b[sortBy] + "").toLowerCase()
-      ? -1 * order : 1 * order;
+
   });
 
   const fetchData = useCallback(() => {
-    // fetch('https://tlylt.github.io/from-the-future/data.json')
-    // fetch('./from-the-future/data.json', {
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //     'Accept': 'application/json'
-    //   }
-    // })
     fetch('https://hkiq5n.deta.dev/')
       .then(response => response.json())
       .then(data => {
@@ -67,9 +67,9 @@ function App() {
   }, [fetchData]);
 
   return (
-    <div className="bg-sku App container max-w-3xl mx-auto pt-3 px-5 font-note">
+    <div className="bg-sku App container max-w-4xl mx-auto pt-3 px-5 font-note">
       <h1 className="mb-3 text-4xl font-futuristic font-bold">From The Future</h1>
-      <p>Notes to (NUS) Computing Freshmen</p>
+      <p className="pb-2">Notes to (NUS) Computing Freshmen</p>
       <AddAdvice
         onSendAdvice={(advice) => sendData(advice)}
       />
