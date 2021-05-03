@@ -3,7 +3,7 @@ import { BiHide } from "react-icons/bi"
 
 const AdviceInfo = ({ advice, onDeleteAdvice }) => {
     return (
-        <li className="grid grid-cols-1 sm:grid-cols-3 py-4">
+        <li className="group hover:bg-sku-light hover:shadow-lg grid grid-cols-1 sm:grid-cols-3 py-4 px-2">
             <div className="max-w-prose text-left sm:col-span-2 overflow-auto">{advice.note}</div>
             <div className="justify-items-end grid items-center content-center">
                 <span>{moment(advice.date).format('LLL')}</span>
