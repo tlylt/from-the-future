@@ -6,6 +6,7 @@ import { useState, useEffect, useCallback } from "react";
 import Footer from './components/Footer';
 import moment from 'moment';
 import ReactGA from 'react-ga';
+import LoadingSpinner from './components/LoadingSpinner';
 
 const TRACKING_ID = 'G-RX1QYLFG2E';
 ReactGA.initialize(TRACKING_ID);
@@ -82,6 +83,7 @@ function App() {
         onOrderByChange={mySort => setOrderBy(mySort)}
         sortBy={sortBy}
         onSortByChange={mySort => setSortBy(mySort)} />
+      <LoadingSpinner shouldShow={adviceList.length === 0} />
       <ul className="divide-y-2 divide-sku-light">
         {filteredAdvice.map(advice => (
           <AdviceInfo key={advice.id} advice={advice}
@@ -90,7 +92,7 @@ function App() {
             } />
         ))}
       </ul>
-      <Footer />
+      <Footer shouldShow={adviceList.length === 0} />
     </div>
   );
 }
