@@ -5,12 +5,8 @@ import AdviceInfo from './components/AdviceInfo';
 import { useState, useEffect, useCallback } from "react";
 import Footer from './components/Footer';
 import moment from 'moment';
-import ReactGA from 'react-ga';
 import LoadingSpinner from './components/LoadingSpinner';
 
-const TRACKING_ID = 'G-RX1QYLFG2E';
-ReactGA.initialize(TRACKING_ID);
-ReactGA.pageview(window.location.pathname + window.location.search);
 function App() {
   let [adviceList, setAdviceList] = useState([]);
   let [query, setQuery] = useState("");
