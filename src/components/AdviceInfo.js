@@ -9,6 +9,7 @@ const AdviceInfo = ({ advice, onDeleteAdvice }) => {
                 <span>{moment(advice.date).format('LLL')}</span>
                 <div><b className="font-bold text-sku-darker">Owner:</b> {advice.owner}</div>
                 <button type="button" onClick={() => onDeleteAdvice(advice.id)}
+                    aria-label="hide advice"
                     className="p-1.5 mr-1.5 mt-1 rounded text-white bg-sku-darker hover:bg-sku-light hover:text-sku-darker focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                     <BiHide /></button>
             </div>
