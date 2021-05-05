@@ -76,7 +76,7 @@ const AddAdvice = ({ onSendAdvice }) => {
                                 onChange={(event) => { setFormData({ ...formData, note: event.target.value }) }}
                                 value={formData.note}
                                 id="note" name="note" rows="4"
-                                maxLength="1000"
+                                maxLength="1500"
                                 required
                                 className="px-1 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-md border-gray-300 rounded-md" placeholder="Your Advice Please..."></textarea>
                         </div>
