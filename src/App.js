@@ -1,4 +1,3 @@
-import './App.css';
 import Search from './components/Search';
 import AddAdvice from './components/AddAdvice';
 import AdviceInfo from './components/AdviceInfo';
@@ -68,7 +67,7 @@ function App() {
   }, [fetchData]);
 
   return (
-    <div className="bg-sku App container max-w-4xl mx-auto pt-3 px-5 font-note">
+    <div className="bg-sku text-center container max-w-4xl mx-auto pt-3 px-5 font-note">
       <h1 className="mb-3 text-4xl font-futuristic font-bold">From The Future</h1>
       <p className="pb-2">Notes to (NUS) Computing Freshmen</p>
       <AddAdvice
