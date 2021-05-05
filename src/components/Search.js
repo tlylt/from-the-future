@@ -39,8 +39,9 @@ const Search = ({ query, onQueryChange, sortBy, onSortByChange, orderBy, onOrder
                     <label htmlFor="query" className="sr-only" />
                 </div>
                 <input type="text" name="query" id="query" value={query} maxLength="50"
+                    autocomplete="off"
                     onChange={(event) => { onQueryChange(event.target.value) }}
-                    className="pl-8 py-2 rounded-md focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300" placeholder="Search" />
+                    className="pl-8 py-2 rounded-md focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm  border-gray-300" placeholder="Search" />
                 <div className="absolute inset-y-0 right-0 flex items-center">
                     <div>
                         <button type="button" onClick={() => setToggleSort(!toggleSort)}

@@ -92,7 +92,7 @@ function App() {
             } />
         ))}
       </ul>
-      <Footer shouldShow={adviceList.length === 0} />
+      <Footer shouldShow={adviceList.length !== 0} />
     </div>
   );
 }
