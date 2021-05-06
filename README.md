@@ -23,5 +23,5 @@ A simple and easy way to add & view advice to (NUS) Computing freshmen. Check ou
 
 Note: Development is active and on-going for the upcoming months. If you wish to work on this project free feel to leave an issue to let me know:)
 
-2/5/2021 - First version ready and launched!
-6/5/2021 - Added testing suite/TypeScript!
+- 2/5/2021: First version ready and launched!
+- 6/5/2021: Added testing suite/TypeScript!
