@@ -2,12 +2,15 @@ import { BiDonateHeart } from "react-icons/bi";
 import { useRef, useState } from "react";
 import moment from "moment";
 import { nanoid } from "nanoid";
-
-const AddAdvice = ({ onSendAdvice }) => {
-    const getNextWaitTime = (currentTerm) => {
+import { Advice } from "../types/Advice";
+type AddAdviceProps =  {
+    onSendAdvice: (advice:Advice) => void;
+}
+const AddAdvice = ({ onSendAdvice }:AddAdviceProps) => {
+    const getNextWaitTime = (currentTerm:number) => {
         let first = 3;
         let second = 5;
-        let temp;
+        let temp:number;
         for (let i = 0; i <= currentTerm; i++) {
             temp = second
             second = first + second
@@ -63,7 +66,7 @@ const AddAdvice = ({ onSendAdvice }) => {
                                 value={formData.owner}
                                 type="text" name="owner" id="owner"
                                 placeholder="Only If You Wish To Be Remembered..."
-                                maxLength="20"
+                                maxLength={20}
                                 className="px-1 max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-md border-gray-300  rounded-md" />
                         </div>
                     </div>
@@ -75,17 +78,17 @@ const AddAdvice = ({ onSendAdvice }) => {
                             <textarea
                                 onChange={(event) => { setFormData({ ...formData, note: event.target.value }) }}
                                 value={formData.note}
-                                id="note" name="note" rows="4"
-                                maxLength="1500"
+                                id="note" name="note" rows={4}
+                                maxLength={1500}
                                 required
                                 className="px-1 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-md border-gray-300 rounded-md" placeholder="Your Advice Please..."></textarea>
                         </div>
                     </div>
                     <div className="sm:grid sm:grid-cols-3 invisible sm:gap-4 sm:items-start hidden sm:pt-5">
                         <label htmlFor="contact" className="block text-sm font-medium text-gray-700">Contact</label>
-                        <input id="contact" name="contact" size="40" type="text"
+                        <input id="contact" name="contact" size={40} type="text"
                             value={formData.contact}
-                            maxLength="10"
+                            maxLength={10}
                             onChange={(event) => { setFormData({ ...formData, contact: event.target.value }) }} />
                     </div>
                     <div>

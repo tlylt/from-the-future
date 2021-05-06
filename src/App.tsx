@@ -5,6 +5,7 @@ import { useState, useEffect, useCallback } from "react";
 import Footer from './components/Footer';
 import moment from 'moment';
 import LoadingSpinner from './components/LoadingSpinner';
+import { Advice } from './types/Advice';
 
 function App() {
   let [adviceList, setAdviceList] = useState([]);
@@ -12,13 +13,13 @@ function App() {
   let [sortBy, setSortBy] = useState("date");
   let [orderBy, setOrderBy] = useState("desc");
   const filteredAdvice = adviceList.filter(
-    item => {
+    (item:Advice): boolean  => {
       return (
         item.owner.toLowerCase().includes(query.toLowerCase()) ||
         item.note.toLowerCase().includes(query.toLowerCase())
       )
     }
-  ).sort((a, b) => {
+  ).sort((a:Advice, b:Advice) : number => {
     let order = (orderBy === 'asc') ? 1 : -1;
     if (sortBy === "date") {
       return moment(a[sortBy] + "", "YYYY-MM-DDTHH:mm:ss.SSSSZ").isBefore(moment(b[sortBy] + "", "YYYY-MM-DDTHH:mm:ss.SSSSZ"))
@@ -27,23 +28,22 @@ function App() {
       return (a[sortBy] + "").toLowerCase() < (b[sortBy] + "").toLowerCase()
         ? -1 * order : 1 * order;
     } else if (sortBy === "length") {
-      return a.note.length < b.note.length ? -1 * order : 1 * order;;
+      return a.note.length < b.note.length ? -1 * order : 1 * order;
     } else {
-      console.log("Something is wrong");
-      return false;
+      throw new Error("Something is wrong");
     }
 
   });
 
-  const fetchData = useCallback(() => {
+  const fetchData = useCallback(():void => {
     fetch('https://hkiq5n.deta.dev/')
       .then(response => response.json())
       .then(data => {
-        setAdviceList(data)
+        setAdviceList(data);
       })
   }, [])
 
-  const sendData = useCallback((advice) => {
+  const sendData = useCallback((advice:Advice):void => {
     setAdviceList([
       ...adviceList, advice
     ]);
@@ -73,17 +73,17 @@ function App() {
       <AddAdvice
         onSendAdvice={(advice) => sendData(advice)}
       />
-      <Search query={query} onQueryChange={myQuery => setQuery(myQuery)}
+      <Search query={query} onQueryChange={(myQuery:string):void => setQuery(myQuery)}
         orderBy={orderBy}
-        onOrderByChange={mySort => setOrderBy(mySort)}
+        onOrderByChange={(mySort:string):void => setOrderBy(mySort)}
         sortBy={sortBy}
-        onSortByChange={mySort => setSortBy(mySort)} />
+        onSortByChange={(mySort:string):void => setSortBy(mySort)} />
       <LoadingSpinner shouldShow={adviceList.length === 0} />
       <ul className="divide-y-2 divide-sku-light">
         {filteredAdvice.map(advice => (
           <AdviceInfo key={advice.id} advice={advice}
             onDeleteAdvice={
-              adviceId => setAdviceList(adviceList.filter(advice => advice.id !== adviceId))
+              (adviceId:string): void => setAdviceList(adviceList.filter(advice => advice.id !== adviceId))
             } />
         ))}
       </ul>
