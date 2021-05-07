@@ -3,22 +3,11 @@ import { useRef, useState } from "react";
 import moment from "moment";
 import { nanoid } from "nanoid";
 import { Advice } from "../types/Advice";
+import getNextWaitTime from "../common/Utils";
 type AddAdviceProps =  {
     onSendAdvice: (advice:Advice) => void;
 }
 const AddAdvice = ({ onSendAdvice }:AddAdviceProps) => {
-    const getNextWaitTime = (currentTerm:number) => {
-        let first = 3;
-        let second = 5;
-        let temp:number;
-        for (let i = 0; i <= currentTerm; i++) {
-            temp = second
-            second = first + second
-            first = temp
-        }
-        return second * 1000;
-    }
-
     const clearData = {
         owner: '',
         date: '',
