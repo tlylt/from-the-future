@@ -2,6 +2,7 @@
   "homepage": "http://tlylt.github.io/from-the-future",
   "name": "from-the-future",
   "version": "0.1.0",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.1.2",
