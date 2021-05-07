@@ -50,7 +50,7 @@ const AddAdvice = ({ onSendAdvice }:AddAdviceProps) => {
     return (
         <div>
             <button onClick={() => { setToggleForm(!toggleForm) }}
-                className={`bg-sku-darker text-white px-2 py-3 w-full text-left rounded-t-md ${toggleForm ? 'rounded-t-md' : 'rounded-md'}`}>
+                className={`hover:bg-indigo-700 bg-sku-darker text-white px-2 py-3 w-full text-left rounded-t-md ${toggleForm ? 'rounded-t-md' : 'rounded-md'}`}>
                 <div><BiDonateHeart className="inline-block" />  Donate Your 5 Cents</div>
             </button>
             {
