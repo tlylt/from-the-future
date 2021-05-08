@@ -8,11 +8,11 @@ import LoadingSpinner from './components/LoadingSpinner';
 import { Advice } from './types/Advice';
 
 function App() {
-  let [adviceList, setAdviceList] = useState([]);
+  let [adviceList, setAdviceList] = useState<Advice[]>([] as Advice[]);
   let [query, setQuery] = useState("");
   let [sortBy, setSortBy] = useState("date");
   let [orderBy, setOrderBy] = useState("desc");
-  const filteredAdvice = adviceList.filter(
+  const filteredAdvice:Advice[] = adviceList.filter(
     (item:Advice): boolean  => {
       return (
         item.owner.toLowerCase().includes(query.toLowerCase()) ||
@@ -34,9 +34,9 @@ function App() {
     }
 
   });
-
+  const BACKEND_URL = 'https://hkiq5n.deta.dev/';
   const fetchData = useCallback(():void => {
-    fetch('https://hkiq5n.deta.dev/')
+    fetch(BACKEND_URL)
       .then(response => response.json())
       .then(data => {
         setAdviceList(data);
@@ -47,7 +47,7 @@ function App() {
     setAdviceList([
       ...adviceList, advice
     ]);
-    fetch('https://hkiq5n.deta.dev/', {
+    fetch(BACKEND_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -73,7 +73,8 @@ function App() {
       <AddAdvice
         onSendAdvice={(advice) => sendData(advice)}
       />
-      <Search query={query} onQueryChange={(myQuery:string):void => setQuery(myQuery)}
+      <Search query={query} 
+      onQueryChange={(myQuery:string):void => setQuery(myQuery)}
         orderBy={orderBy}
         onOrderByChange={(mySort:string):void => setOrderBy(mySort)}
         sortBy={sortBy}
@@ -83,7 +84,8 @@ function App() {
         {filteredAdvice.map(advice => (
           <AdviceInfo key={advice.id} advice={advice}
             onDeleteAdvice={
-              (adviceId:string): void => setAdviceList(adviceList.filter(advice => advice.id !== adviceId))
+              (adviceId:string): void => 
+              setAdviceList(adviceList.filter((advice: Advice) => advice.id !== adviceId))
             } />
         ))}
       </ul>

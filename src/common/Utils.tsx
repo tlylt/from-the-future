@@ -1,4 +1,4 @@
-const getNextWaitTime = (currentTerm:number) => {
+const getNextWaitTime = (currentTerm:number):number => {
     let first = 3;
     let second = 5;
     let temp:number;

@@ -1,7 +1,13 @@
 import moment from "moment";
 import { BiHide } from "react-icons/bi"
+import { Advice } from "../types/Advice";
 
-const AdviceInfo = ({ advice, onDeleteAdvice }) => {
+type AdviceInfoProps = {
+    advice: Advice,
+    onDeleteAdvice: (id:string) => void
+}
+
+const AdviceInfo = ({ advice, onDeleteAdvice }:AdviceInfoProps) => {
     return (
         <li className="group hover:bg-sku-light hover:shadow-lg grid grid-cols-1 sm:grid-cols-3 py-4 px-2">
             <div className="max-w-prose text-left sm:col-span-2 overflow-auto">{advice.note}</div>
