@@ -19,7 +19,8 @@ A simple and easy way to add & view advice to (NUS) Computing freshmen. Check ou
 
 ##### CI/CD
 
-- Github Actions and Github Pagess
+- Github Actions
+- Github Pages
 
 ---
 
