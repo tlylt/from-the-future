@@ -17,6 +17,10 @@ A simple and easy way to add & view advice to (NUS) Computing freshmen. Check ou
 - Flask (Python)
 - Deta base (NoSQL)
 
+##### CI/CD
+
+- Github Actions and Github Pagess
+
 ---
 
 ### Progress Log
