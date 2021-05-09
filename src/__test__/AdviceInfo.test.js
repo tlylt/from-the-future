@@ -16,7 +16,7 @@ describe('rendering an advice', () => {
         />);
         expect(getByText('testNote')).toBeInTheDocument();
         expect(getByText('testOwner')).toBeInTheDocument();
-        expect(getByText("May 2, 2021 8:45 PM")).toBeInTheDocument();
+        expect(getByText(/May 2, 2021 [0-9]+:45 PM/)).toBeInTheDocument();
     });
 
     it('should trigger delete', () => {
