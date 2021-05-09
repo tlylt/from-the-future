@@ -1,6 +1,6 @@
 ### Motivation
 
-A simple and easy way to add & view advice to (NUS) Computing freshmen. Check out the [website](https://tlylt.github.io/from-the-future/)
+A simple and easy way to add & view advice to (NUS) Computing freshmen. Check out the [website](https://tlylt.github.io/from-the-future/). You are welcomed to leave an advice for the future computing freshmen.
 
 ---
 
