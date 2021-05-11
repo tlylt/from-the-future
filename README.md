@@ -10,7 +10,7 @@ A simple and easy way to add & view advice to (NUS) Computing freshmen. Check ou
 
 - React (TypeScript)
 - Tailwind (CSS)
-- Jest & React testing library (Testing suite)
+- Jest & React testing library & Cypress (Testing suite)
 
 ##### Backend
 
