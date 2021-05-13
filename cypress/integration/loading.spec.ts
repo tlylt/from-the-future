@@ -1,7 +1,6 @@
-/// <reference types="cypress" />
 describe('Loading and basic viewing', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:3000/from-the-future')
+        cy.visit('/')
     })
     it('Visits the homepage', () => {
         cy.contains('From The Future')

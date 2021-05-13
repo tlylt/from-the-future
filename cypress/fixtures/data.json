@@ -1,0 +1,184 @@
+[
+  {
+    "date": "2021-05-02T11:44:28.160Z",
+    "id": "QeR3kOT1R25VBQOMQy3wb",
+    "key": "0ngpyxehk05r",
+    "note": "Be language agnostic. Learn how to self-learn. Also, the curriculum is made for everyone to follow. Learn beyond the course.",
+    "owner": "Vaarnan"
+  },
+  {
+    "date": "2021-05-02T11:43:39.531Z",
+    "id": "HgVv170qMvX57YNxCiIA5",
+    "key": "0pmpyzp4s3kg",
+    "note": "Don’t be afraid. http://metacog.tumblr.com/post/15889275145/fear-of-programming-stupidity",
+    "owner": "Ced"
+  },
+  {
+    "date": "2021-05-05T02:54:16.433Z",
+    "id": "rPxwqAJTna9bTLt5nLepw",
+    "key": "0sytzdl6d2sh",
+    "note": "Ideas were never really new, they were reinvented.",
+    "owner": "Shaun Stanislaus"
+  },
+  {
+    "date": "2021-05-05T02:50:56.188Z",
+    "id": "u9uxHK3li10agDP1zo0Eh",
+    "key": "17l9pk3j3r87",
+    "note": "It doesn’t matter what you study, as long as you keep learning. Read lots (blogs, books, papers), keep experimenting and keep practicing!",
+    "owner": "Joshua"
+  },
+  {
+    "date": "2021-05-05T02:52:34.698Z",
+    "id": "JA6rJfEuC2SGwq84ADcq1",
+    "key": "21hz50yoaqob",
+    "note": "take your time, but remember to take the time. Plan your days and buffer everything. Best part about buffers is that if you don't need them, you have instant free time. Also, cap isn't everything.(lucky freshies)",
+    "owner": "Sleeper"
+  },
+  {
+    "date": "2021-05-05T02:56:11.707Z",
+    "id": "QRKhkTT5Jm9PbdI2vOGen",
+    "key": "2lifwqpzo7k0",
+    "note": "Computer Science/Software Engineering is the best industry where you can fail early, fail often, and fail cheaply, and learn new tricks more efficiently\nInspiring video by Derek Sivers: Why you need to fail http://www.youtube.com/watch?v=HhxcFGuKOys\nThe test of pudding is in the eating. Go get a freelancing project, teach youngl gitings and be IT consultant. You will learn more from what you picked up from theory books and grill your knowledge and skills\nThe ultimate goal of science and engineering, including Computer Science & Software Engineering is to reproduce success and best practices so learn to convey your message with simplicity",
+    "owner": "Viet"
+  },
+  {
+    "date": "2021-05-05T02:51:58.772Z",
+    "id": "SWWVCxkOFki4Y32U-Y_bC",
+    "key": "2t01klcswxrk",
+    "note": "If you are willing to take risks, test your limits, and put in the hard work you need to, you will find friends and mentors glad to guide you, help you, and accompany you.",
+    "owner": "Johannes"
+  },
+  {
+    "date": "2021-05-02T11:44:49.802Z",
+    "id": "bXY55o56j2RDgJeGdAnTx",
+    "key": "3mpu4so331vn",
+    "note": "Go out and meet people from industry",
+    "owner": "Laurence"
+  },
+  {
+    "date": "2021-05-02T11:44:02.365Z",
+    "id": "RFMbmsyv4B6dom9owPt07",
+    "key": "6unmngc3f6b6",
+    "note": "You’re probably not learning as much as you should be",
+    "owner": "Div"
+  },
+  {
+    "date": "2021-05-02T11:44:13.480Z",
+    "id": "0GFfZ2F28HZs8egvw_iGF",
+    "key": "760012v4hsz0",
+    "note": "join CCAs, don’t just mug. CAP is not everything.",
+    "owner": "Wen Bin"
+  },
+  {
+    "date": "2021-05-05T02:53:37.606Z",
+    "id": "yFdFSJ7AMhZnf5Kxf5luf",
+    "key": "7uf2arix4s0j",
+    "note": "Learning how to learn is crucial in this age where current technology turns obsolete in the blink of an eye. The skills you possess may not be needed by your future employer and you will have to learn on the job. Your employers will want you to learn FAST.\nLike what you do and do what you like. Naturally you will spend more time on it and you will do them well.\nCAP is hardly of importance (but don’t neglect it!) in securing a decent job. Your employers look out for your past experiences and how fast you pick things up. Attitude comes before aptitude.",
+    "owner": "Yang Shun"
+  },
+  {
+    "date": "2021-05-05T02:51:21.131Z",
+    "id": "EttQF2q6ilZOYarS6y033",
+    "key": "8t0aupuq67og",
+    "note": "If you take the CS1101S mod, skip the last two missions. lol. You can get a decent mark from the rest of it, no point wasting time near finals :P",
+    "owner": "Keir"
+  },
+  {
+    "date": "2021-05-05T02:48:53.503Z",
+    "id": "DAjySE85YB06Rv1L0Gjcg",
+    "key": "c7ey5vbvqjic",
+    "note": "CS can get very political, and it's easy to get into debates where someone says you should make use of some software/programming-language/API/operating-system/convention etc. etc. rather than the one you're using, or how you should learn 20 different things when what you know is all you need to get you through the job. (And they may even be correct. ;-) ).\nOstentation will not make you a better programmer.",
+    "owner": "Richard"
+  },
+  {
+    "date": "2021-05-05T02:51:35.633Z",
+    "id": "HcD_GtRKVTskBXNobh8vC",
+    "key": "f0q3unzrkkhe",
+    "note": "Functional programming is kind of hot nowadays. New programming languages such as Swift and Rust has several features borrowed / inspired from functional language. Even Java 8 and C++11 added things like lambda.\nIt is quite sad that you can graduate from NUS without learning those things.\nIf you did not take CS1101S, it’s fine, you can catch up on those concepts by taking CS2104 or learning it on your own.\nYou can always go beyond maps and folds and pick Haskell.",
+    "owner": "Evan"
+  },
+  {
+    "date": "2021-05-02T12:45:50.305Z",
+    "id": "TlXNdaIc2Trd_osd-0oTD",
+    "key": "f2btjwdo5jvo",
+    "note": "Be proud at what you do, but not arrogant. Be humble at what you do, but not timid. Uni is crazily diversed and everyone is gifted in his/her own way. Always treat each other with respect.",
+    "owner": "Anonymous"
+  },
+  {
+    "date": "2021-05-05T02:51:09.023Z",
+    "id": "7HglTbjaJIpBEhTVtUV8h",
+    "key": "f3xwuphmwdyd",
+    "note": "All of this may seem really overwhelming, if you’re just starting out. Just make the best out of your time in NUS (and SoC especially). You’re not alone.",
+    "owner": "Dat"
+  },
+  {
+    "date": "2021-05-05T02:55:36.802Z",
+    "id": "Dc7luVjt2JPwwKEnJ-U01",
+    "key": "h5s37t5x13ae",
+    "note": "Read newspaper or books (not just textbooks), everyday.",
+    "owner": "GCL"
+  },
+  {
+    "date": "2021-05-02T12:17:01.156Z",
+    "id": "Vg0EEwK3aOsMTgXZDJgEf",
+    "key": "lgq6xuyiwy0o",
+    "note": "Be positive and stay positive, treat your peers as a source of inspiration. We all learn at a different pace, just make sure you’re a better version of yourself everyday!",
+    "owner": "Tim Young"
+  },
+  {
+    "date": "2021-05-05T02:53:13.126Z",
+    "id": "GUVks4xmIZXGnISl45UKC",
+    "key": "nalf2w8mh7hq",
+    "note": "http://ymichael.github.io/projectintern on overseas internship. Also, it has been mentioned before but again, learn and use a version control system. I have seen people spending 1 year as a computing student, yet still refusing to learn, using Dropbox to sync code with their teammates.",
+    "owner": "Minqi"
+  },
+  {
+    "date": "2021-05-05T02:49:16.057Z",
+    "id": "xO3OCFhT1OLWOQRhALzb1",
+    "key": "olwc5eqdy88x",
+    "note": "Don’t just spend all your time on school work. CS is all about doing things yourself, figuring things out without much official help. Hack around whatever thing you like. Remember, the goal is learning. You can’t learn with just textbooks alone. You must learn by doing. Also, make yourself surrounded by smart people. You can learn a lot from your peers who are better than you.",
+    "owner": "Ryan"
+  },
+  {
+    "date": "2021-05-05T02:49:56.150Z",
+    "id": "FqWC93vVqVEFTf0a9bUav",
+    "key": "qiudjowk5cgc",
+    "note": "Learn different kinds of programming paradigms. Learn functional programming, logic programming, stack-based programming, voodoo-oriented programming (I made the last one up)... The (computing) world is not just made of this shiny OOP thing",
+    "owner": "Bach"
+  },
+  {
+    "date": "2021-05-02T11:43:25.925Z",
+    "id": "0_s5oDfgdEBD7RM2iqojO",
+    "key": "rnd0nk81s2rt",
+    "note": "Computer Science is not about programming, though they go hand in hand.",
+    "owner": "Adhiraj"
+  },
+  {
+    "date": "2021-05-05T02:48:36.518Z",
+    "id": "N258L-mOFw1zXHLIIPsM5",
+    "key": "ru4sdxnlgmd5",
+    "note": "don't be intimidated/overwhelmed if you find yourself among the really awesome programmers, especially if you're coming in without any background. do your best to keep up with the lectures, and learn to pick up skills/knowledge outside of school-taught content by doing your own reading",
+    "owner": "Silin"
+  },
+  {
+    "date": "2021-05-05T02:48:24.811Z",
+    "id": "Cgl-fPoNxOH2I33alLScN",
+    "key": "uly5q23g39jg",
+    "note": "Make stuff to make your life easier. This works in more ways than one.",
+    "owner": "Andrew"
+  },
+  {
+    "date": "2021-05-02T11:44:38.844Z",
+    "id": "CQ1B8AIydgwcWjng1I1aj",
+    "key": "xg8ojin90nr8",
+    "note": "Experiment; it’s not expensive to experiment with computers.",
+    "owner": "Frank"
+  },
+  {
+    "date": "2021-05-02T11:43:01.248Z",
+    "id": "sGsbGic9Xhob34us5Kv9O",
+    "key": "y7b79v2x6x0s",
+    "note": "Apply for NOC Silicon Valley to intern in a tech startup. You’ll learn loads with the right attitude. Don’t worry if you “didn't start a business” or “don't have entrepreneurship experience”. They love CS students.",
+    "owner": "Ali"
+  }
+]

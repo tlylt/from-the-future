@@ -23,3 +23,9 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('updateFixture', () => {
+    cy.request('https://hkiq5n.deta.dev/').then((response) => {
+        cy.writeFile('cypress/fixtures/data.json', response.body)
+    })
+})

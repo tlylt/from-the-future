@@ -1,11 +1,12 @@
-/// <reference types="cypress" />
-
 context('Aliasing', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/from-the-future')
     // Alias the route to wait for its response
-    cy.intercept('GET', 'https://hkiq5n.deta.dev/').as('getAdvice')
-
+    // intercept before visit https://glebbahmutov.com/blog/cypress-intercept-problems/
+    cy.intercept('GET', Cypress.env("apiUrl"),{
+      fixture: 'data.json',
+      delayMs: 1000,
+    }).as('getAdvice')
+    cy.visit('/')
     // https://on.cypress.io/wait
     cy.wait('@getAdvice').its('response.statusCode').should('eq', 200)
   })

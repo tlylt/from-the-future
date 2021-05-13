@@ -1,1 +1,6 @@
-{}
+{
+  "baseUrl": "http://localhost:3000/from-the-future",
+  "env": {
+    "apiUrl": "https://hkiq5n.deta.dev/"
+  }
+}
