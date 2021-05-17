@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import moment from 'moment';
 import LoadingSpinner from './components/LoadingSpinner';
 import { Advice } from './types/Advice';
+import { BACKEND_URL } from './common/Constants';
 
 function App() {
   let [adviceList, setAdviceList] = useState<Advice[]>([] as Advice[]);
@@ -34,7 +35,6 @@ function App() {
     }
 
   });
-  const BACKEND_URL = 'https://hkiq5n.deta.dev/';
   const fetchData = useCallback(():void => {
     fetch(BACKEND_URL)
       .then(response => response.json())

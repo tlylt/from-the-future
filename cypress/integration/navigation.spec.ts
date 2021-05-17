@@ -40,7 +40,7 @@ context("Navigation", () => {
     // Visit any sub-domain of your current domain
 
     // Pass options to the visit
-    cy.visit("https://example.cypress.io/commands/navigation", {
+    cy.visit("/", {
       timeout: 50000, // increase total time for the visit to resolve
       onBeforeLoad(contentWindow) {
         // contentWindow is the remote page's window object
