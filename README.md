@@ -6,7 +6,7 @@ A simple and easy way to add & view advice to (NUS) Computing freshmen. Check ou
 
 ## Contributing
 
-Thanks for your interest in contributing! There are many ways to contribute to this project. Get started [here](CONTRIBUTING).
+Thanks for your interest in contributing! There are many ways to contribute to this project. Get started [here](CONTRIBUTING.md).
 
 ---
 ## Tech Stack
