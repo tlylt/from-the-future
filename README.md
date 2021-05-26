@@ -1,26 +1,37 @@
-### Motivation
+## Motivation
 
 A simple and easy way to add & view advice to (NUS) Computing freshmen. Check out the [website](https://tlylt.github.io/from-the-future/). You are welcomed to leave an advice for the future computing freshmen.
 
 ---
 
-### Tech Stack
+## Contributing
 
-##### Frontend
+Thanks for your interest in contributing! There are many ways to contribute to this project. Get started [here](CONTRIBUTING).
+
+---
+## Tech Stack
+
+### Frontend
 
 - React (TypeScript)
 - Tailwind (CSS)
 - Jest & React testing library & Cypress (Testing suite)
 
-##### Backend
+### Backend
 
 - Flask (Python)
 - Deta base (NoSQL)
 
-##### CI/CD
+### CI/CD
 
 - Github Actions
 - Github Pages
+
+### Test
+
+- Jest
+- React testing library
+- Cypress
 
 ---
 
