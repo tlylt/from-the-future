@@ -31,7 +31,7 @@ context("Network Requests", () => {
     });
   });
 
-  it("cy.request() - verify response using BDD syntax", () => {
+  it.skip("cy.request() - verify response using BDD syntax", () => {
     cy.request(Cypress.env("apiUrl")).then((response) => {
       // https://on.cypress.io/assertions
       expect(response).property("status").to.equal(200);
